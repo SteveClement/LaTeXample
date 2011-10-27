@@ -1,0 +1,46 @@
+% DO NOT COMPILE THIS FILE DIRECTLY!
+% This is included by the other .tex files.
+
+\begin{frame}[t,plain]
+  \titlepage
+\end{frame}
+
+\begin{frame}[t,fragile]{LaTeX Example}
+\begin{itemize}
+  \item This is {\bf bold text}
+  \begin{lstlisting}
+  {\bf bold text}
+  \end{lstlisting}
+but what is [t,fragile]?
+  \item How to insert comments?
+  Easy: \% this is a comment in LaTeX
+  OR:
+  \begin{lstlisting}
+    \usepackage{verbatim}
+    \begin{comment}
+      \broken{LaTeX}
+    \end{comment}
+  \end{lstlisting}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[t,fragile]{LaTeX Example}  
+\begin{itemize}
+  \item How to insert new lines?
+  Keep it real dude, this is not PowerPoint!
+  \item How to center an image in portraid?
+  \begin{lstlisting}
+  \vfill
+  \begin{center}
+    \includegraphics[scale=0.2]{images/GotRum.jpg}
+  \end{center}
+  \vfill
+  \end{lstlisting}
+  \item Indentation rulez?
+  \item Three dots: $\dots$
+  use Math mode: 
+  \begin{lstlisting}
+  $\dots$
+  \end{lstlisting}
+\end{itemize}
+\end{frame}

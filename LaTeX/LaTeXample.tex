@@ -1,0 +1,28 @@
+\documentclass[hyperref={pdfpagelabels=false}]{beamer}
+\let\Tiny=\tiny
+\usetheme[pageofpages=of,% String used between the current page and the
+                         % total page count.
+          bullet=circle,% Use circles instead of squares for bullets.
+          titleline=true,% Show a line below the frame title.
+          alternativetitlepage=true,% Use the fancy title page.
+          titlepagelogo=images/circlsmile.pdf,% Logo for the first page.
+%          watermark=watermark-polito,% Watermark used in every page.
+%          watermarkheight=100px,% Height of the watermark.
+%          watermarkheightmult=4,% The watermark image is 4 times bigger
+                                % than watermarkheight.
+          ]{Torino}
+
+\usepackage[utf8]{inputenc}
+\usepackage{fancyvrb}
+\usepackage{listings}
+\lstset{language=TeX}
+\usepackage{lmodern}
+\author{Steve Clement - CIRCL \emph{TLP:GREEN}}
+\title{Information inSecurity at the dawn of digital mobility}
+\institute{}
+%\date{\today}
+\date{October 11, 2011}
+
+\begin{document}
+\include{content}
+\end{document}
