@@ -1,10 +1,12 @@
 % DO NOT COMPILE THIS FILE DIRECTLY!
 % This is included by the other .tex files.
 
+% Page1
 \begin{frame}[t,plain]
   \titlepage
 \end{frame}
 
+% Page2
 \begin{frame}[t,fragile]{LaTeX Example}
 \begin{itemize}
   \item This is {\bf bold text}
@@ -12,6 +14,7 @@
   {\bf bold text}
   \end{lstlisting}
 but what is [t,fragile]?
+fragile is needed for verbatim/lstlisting
   \item How to insert comments?
   Easy: \% this is a comment in LaTeX
   OR:
@@ -24,6 +27,7 @@ but what is [t,fragile]?
   \end{itemize}
 \end{frame}
 
+% Page3
 \begin{frame}[t,fragile]{LaTeX Example}  
 \begin{itemize}
   \item How to insert new lines?
@@ -42,5 +46,180 @@ but what is [t,fragile]?
   \begin{lstlisting}
   $\dots$
   \end{lstlisting}
+  Or use this: \ldots
+  \begin{lstlisting}
+  \ldots
+  \end{lstlisting}
 \end{itemize}
+\end{frame}
+
+% Page4
+\begin{frame}[t,fragile]{LaTeX Example}  
+\begin{tikzpicture}
+  \path[mindmap,concept color=black,text=white]
+    node[concept] {Computer Science}
+    [clockwise from=0]
+    child[concept color=green!50!black] {
+      node[concept] {practical}
+      [clockwise from=90]
+      child { node[concept] {algorithms} }
+      child { node[concept] {data structures} }
+      child { node[concept] {pro\-gramming languages} }
+      child { node[concept] {software engineer\-ing} }
+    }  
+    child[concept color=blue] {
+      node[concept] {applied}
+      [clockwise from=-30]
+      child { node[concept] {databases} }
+      child { node[concept] {WWW} }
+    }
+    child[concept color=red] { node[concept] {technical} }
+    child[concept color=orange] { node[concept] {theoretical} };
+\end{tikzpicture}
+\end{frame}
+
+% Page5
+\begin{frame}[t,fragile]{LaTeX Example}  
+
+  \begin{lstlisting}
+     \url{}
+  \end{lstlisting}
+
+\url{http://wiki.localhost.lu}
+
+Otherwise weird errors appear in your LaTeX console. You might need to usepackage url
+
+If you need some umlaut this nomenclature needs to be used:
+  \begin{lstlisting}
+     \"{e} OR $\ddot{e}$
+  \end{lstlisting}
+
+This renders to: \"{e} $\ddot{e}$
+
+More umlaut sweetness: $\grave{e}$, $\hat{e}$, $\acute{e}$
+
+  \begin{lstlisting}
+    $\grave{e}$
+    $\hat{e}$
+    $\acute{e}$
+  \end{lstlisting}
+
+\end{frame}
+
+% Page6
+\begin{frame}[t,fragile]{LaTeX Example}
+
+%So you want to write this: (a/x)\verb|^|2
+
+The easy route would be: 
+\begin{lstlisting}
+$(\frac{a}{x} )^2$
+\end{lstlisting}
+
+And you end up with this: $(\frac{a}{x} )^2$
+
+But to beautify it we use \\left and \\right:
+
+  \begin{lstlisting}
+   $\left(\frac{a}{x} \right)^2$
+  \end{lstlisting}
+   $\left(\frac{a}{x} \right)^2$
+
+\end{frame}
+
+% Page7
+\begin{frame}[t,fragile]{LaTeX Example}
+
+%Some Math/symbols:
+
+  \begin{lstlisting}
+$\sqrt{x}$
+$\times$
+$\star$
+$\le$
+$\ge$
+$\neq$
+$\sim$
+$\simeq$
+$\approx$
+  \end{lstlisting}
+
+$\sqrt{x}$
+$\times$
+$\star$
+$\le$
+$\ge$
+$\neq$
+$\sim$
+$\simeq$
+$\approx$
+\end{frame}
+
+% Page8
+\begin{frame}[t,fragile]{LaTeX Example}
+  \begin{lstlisting}
+$\equiv$
+$\infty$
+$\to$
+$\gets$
+$\leftarrow$
+$\rightarrow$
+$\leftrightarrow$
+$\Leftrightarrow$
+$\backslash$
+  \end{lstlisting}
+
+$\equiv$
+$\infty$
+$\to$
+$\gets$
+$\leftarrow$
+$\rightarrow$
+$\leftrightarrow$
+$\Leftrightarrow$
+$\backslash$
+
+\end{frame}
+
+% Page9
+\begin{frame}[t,fragile]{LaTeX Example}
+
+%Greek Letters:
+  \begin{lstlisting}
+ \alpha \beta	 \gamma \delta \epsilon \varepsilon
+ \zeta \eta	 \theta \vartheta \iota \kappa \lambda
+ \mu	\nu \xi \pi \varpi \rho \varrho \sigma
+ \varsigma \tau \upsilon \phi \varphi \chi \psi
+ \omega
+  \end{lstlisting}
+
+\begin{tabular}{ l c c c c c c r }
+  $\alpha$ & $\beta$ & $\gamma$ & $\delta$ & $\epsilon$ & $\varepsilon$ & $\zeta$ & $\eta$ \\
+  $\theta$ & $\vartheta$ & $\iota$ & $\kappa$ & $\lambda$ & $\mu$ & $\nu$ & $\xi$ \\
+  $\pi$ & $\varpi$ & $\rho$ & $\varrho$ & $\sigma$ & $\varsigma$ & $\tau$ & $\upsilon$ \\
+  $\phi$ & $\varphi$ & $\chi$ & $\psi$ & $\omega$ \\
+\end{tabular}
+
+Uppercase letters start with an Uppercase letter :) $\alpha$
+
+\end{frame}
+
+% Page10
+\begin{frame}[t,fragile]{LaTeX Example}
+
+%Quick table:
+
+\begin{lstlisting}
+  \begin{tabular}{ l c c r }
+  one & two & three & four \\
+  5 & 6 & 7 & 8 \\
+  9 & ten \\
+  \end{tabular}
+\end{lstlisting}
+
+\begin{tabular}{ l | c || c r }
+one & two & three & four \\ \hline
+5 & 6 & 7 & 8 \\
+9 & ten \\
+\end{tabular}
 \end{frame}
