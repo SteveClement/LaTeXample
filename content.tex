@@ -28,7 +28,7 @@ fragile is needed for verbatim/lstlisting
 \end{frame}
 
 % Page3
-\begin{frame}[t,fragile]{LaTeX Example}  
+\begin{frame}[t,fragile]{LaTeX Example}
 \begin{itemize}
   \item How to insert new lines?
   Keep it real dude, this is not PowerPoint!
@@ -42,7 +42,7 @@ fragile is needed for verbatim/lstlisting
   \end{lstlisting}
   \item Indentation rulez?
   \item Three dots: $\dots$
-  use Math mode: 
+  use Math mode:
   \begin{lstlisting}
   $\dots$
   \end{lstlisting}
@@ -54,32 +54,35 @@ fragile is needed for verbatim/lstlisting
 \end{frame}
 
 % Page4
-\begin{frame}[t,fragile]{LaTeX Example}  
-\begin{tikzpicture}
-  \path[mindmap,concept color=black,text=white]
-    node[concept] {Computer Science}
-    [clockwise from=0]
-    child[concept color=green!50!black] {
-      node[concept] {practical}
-      [clockwise from=90]
-      child { node[concept] {algorithms} }
-      child { node[concept] {data structures} }
-      child { node[concept] {pro\-gramming languages} }
-      child { node[concept] {software engineer\-ing} }
-    }  
-    child[concept color=blue] {
-      node[concept] {applied}
-      [clockwise from=-30]
-      child { node[concept] {databases} }
-      child { node[concept] {WWW} }
-    }
-    child[concept color=red] { node[concept] {technical} }
-    child[concept color=orange] { node[concept] {theoretical} };
-\end{tikzpicture}
+\begin{frame}[t,fragile]{LaTeX Example}
+%\begin{tikzpicture}[thick,scale=0.6, every node/.style={scale=0.6}]
+  \begin{center}
+    \begin{tikzpicture}[thick,scale=0.5, every node/.style={transform shape}]
+      \path[mindmap,concept color=black,text=white]
+        node[concept] {Computer Science}
+        [clockwise from=0]
+        child[concept color=green!50!black] {
+          node[concept] {practical}
+          [clockwise from=90]
+          child { node[concept] {algorithms} }
+          child { node[concept] {data structures} }
+          child { node[concept] {pro\-gramming languages} }
+          child { node[concept] {software engineer\-ing} }
+        }
+        child[concept color=blue] {
+          node[concept] {applied}
+          [clockwise from=-30]
+          child { node[concept] {databases} }
+          child { node[concept] {WWW} }
+        }
+        child[concept color=red] { node[concept] {technical} }
+        child[concept color=orange] { node[concept] {theoretical} };
+    \end{tikzpicture}
+  \end{center}
 \end{frame}
 
 % Page5
-\begin{frame}[t,fragile]{LaTeX Example}  
+\begin{frame}[t,fragile]{LaTeX Example}
 
   \begin{lstlisting}
      \url{}
@@ -111,7 +114,7 @@ More umlaut sweetness: $\grave{e}$, $\hat{e}$, $\acute{e}$
 
 %So you want to write this: (a/x)\verb|^|2
 
-The easy route would be: 
+The easy route would be:
 \begin{lstlisting}
 $(\frac{a}{x} )^2$
 \end{lstlisting}
@@ -227,9 +230,16 @@ one & two & three & four \\ \hline
 % Page 11
 \begin{frame}[t,fragile]{LaTeX Example}
 
-    `It\textquotesingle s a nice day!' \\
-    OR
-    `It{\textquotesingle}s a nice day!' \\
-    
+  `It\textquotesingle s a nice day!' \\
+  OR \\
+  `It{\textquotesingle}s a nice day!' \\
+
+\end{frame}
+
+% Page 12
+\begin{frame}[t,fragile]{LaTeX Example}
+
+  'To quickly turn a ? or ! upside down use the back-tick `! `? \\
+
 \end{frame}
 
