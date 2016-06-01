@@ -7,11 +7,11 @@
 \end{frame}
 
 % Page2
-\begin{frame}[t,fragile]{LaTeX Example}
+\begin{frame}[t,fragile]{LaTeX Example - Bold text, comments and fragile}
 \begin{itemize}
   \item This is {\bf bold text}
   \begin{lstlisting}
-  {\bf bold text}
+    {\bf bold text}
   \end{lstlisting}
 but what is [t,fragile]?
 fragile is needed for verbatim/lstlisting
@@ -28,11 +28,11 @@ fragile is needed for verbatim/lstlisting
 \end{frame}
 
 % Page3
-\begin{frame}[t,fragile]{LaTeX Example}
+\begin{frame}[t,fragile]{LaTeX Example - New lines, center stuff, 3-dots}
 \begin{itemize}
   \item How to insert new lines?
   Keep it real dude, this is not PowerPoint!
-  \item How to center an image in portraid?
+  \item How to center an image in portrait?
   \begin{lstlisting}
   \vfill
   \begin{center}
@@ -40,7 +40,7 @@ fragile is needed for verbatim/lstlisting
   \end{center}
   \vfill
   \end{lstlisting}
-  \item Indentation rulez?
+  \item Indentation rules: 2-spaces
   \item Three dots: $\dots$
   use Math mode:
   \begin{lstlisting}
@@ -54,7 +54,7 @@ fragile is needed for verbatim/lstlisting
 \end{frame}
 
 % Page4
-\begin{frame}[t,fragile]{LaTeX Example}
+\begin{frame}[t,fragile]{LaTeX Example - Tikz mind-map}
 %\begin{tikzpicture}[thick,scale=0.6, every node/.style={scale=0.6}]
   \begin{center}
     \begin{tikzpicture}[thick,scale=0.5, every node/.style={transform shape}]
@@ -82,7 +82,7 @@ fragile is needed for verbatim/lstlisting
 \end{frame}
 
 % Page5
-\begin{frame}[t,fragile]{LaTeX Example}
+\begin{frame}[t,fragile]{LaTeX Example - URLs, umlaut}
 
   \begin{lstlisting}
      \url{}
@@ -90,27 +90,27 @@ fragile is needed for verbatim/lstlisting
 
 \url{http://wiki.localhost.lu}
 
-Otherwise weird errors appear in your LaTeX console. You might need to usepackage url
+Otherwise weird errors appear in your LaTeX console. You need to usepackage url
 
 If you need some umlaut this nomenclature needs to be used:
   \begin{lstlisting}
      \"{e} OR $\ddot{e}$
   \end{lstlisting}
 
-This renders to: \"{e} $\ddot{e}$
+This renders to: \"{e} $\ddot{e}$ $\to$ use the $\backslash$"\{e\} notation, renders cleaner
 
-More umlaut sweetness: $\grave{e}$, $\hat{e}$, $\acute{e}$
+More umlaut sweetness: $\grave{e}$, \`{e}, $\hat{e}$, \^{e}, $\acute{e}$, \'{e}
 
   \begin{lstlisting}
-    $\grave{e}$
-    $\hat{e}$
-    $\acute{e}$
+    $\grave{e}$ - \`{e}
+    $\hat{e}$ - \^{e}
+    $\acute{e}$ - \'{e}
   \end{lstlisting}
 
 \end{frame}
 
 % Page6
-\begin{frame}[t,fragile]{LaTeX Example}
+\begin{frame}[t,fragile]{LaTeX Example - simple math}
 
 %So you want to write this: (a/x)\verb|^|2
 
@@ -131,7 +131,7 @@ But to beautify it we use \\left and \\right:
 \end{frame}
 
 % Page7
-\begin{frame}[t,fragile]{LaTeX Example}
+\begin{frame}[t,fragile]{LaTeX Example - more math symbols}
 
 %Some Math/symbols:
 
@@ -159,7 +159,7 @@ $\approx$
 \end{frame}
 
 % Page8
-\begin{frame}[t,fragile]{LaTeX Example}
+\begin{frame}[t,fragile]{LaTeX Example - More symbols}
   \begin{lstlisting}
 $\equiv$
 $\infty$
@@ -185,7 +185,7 @@ $\backslash$
 \end{frame}
 
 % Page9
-\begin{frame}[t,fragile]{LaTeX Example}
+\begin{frame}[t,fragile]{LaTeX Example - Greek letters}
 
 %Greek Letters:
   \begin{lstlisting}
@@ -208,7 +208,7 @@ Uppercase letters start with an Uppercase letter :) $\alpha$
 \end{frame}
 
 % Page10
-\begin{frame}[t,fragile]{LaTeX Example}
+\begin{frame}[t,fragile]{LaTeX Example - Tables}
 
 %Quick table:
 
@@ -228,7 +228,7 @@ one & two & three & four \\ \hline
 \end{frame}
 
 % Page 11
-\begin{frame}[t,fragile]{LaTeX Example}
+\begin{frame}[t,fragile]{LaTeX Example - quotes}
 
   `It\textquotesingle s a nice day!' \\
   OR \\
@@ -237,9 +237,39 @@ one & two & three & four \\ \hline
 \end{frame}
 
 % Page 12
-\begin{frame}[t,fragile]{LaTeX Example}
+\begin{frame}[t,fragile]{LaTeX Example - Upside down !}
 
   'To quickly turn a ? or ! upside down use the back-tick `! `? \\
+
+\end{frame}
+
+% Page 13
+\begin{frame}[t,fragile]{LaTeX Example - Tikz scaling and drawing}
+
+  \framebox{\begin{tikzpicture}[thick]
+    \draw [dashed] (1,12) -- (11,12);
+    \node[above] at (4,11) {1}; \node[above] at (8,11) {true};
+  \end{tikzpicture}}
+
+  \framebox{\begin{tikzpicture}[thick, scale=0.6]
+    \draw [dashed] (1,12) -- (11,12);
+    \node[above] at (4,11) {1}; \node[above] at (8,11) {true};
+  \end{tikzpicture}}
+
+  \framebox{\begin{tikzpicture}[thick, transform canvas={scale=0.6}]
+    \draw [dashed] (1,12) -- (11,12);
+    \node[above] at (4,11) {1}; \node[above] at (8,11) {true};
+  \end{tikzpicture}}
+
+  \framebox{\begin{tikzpicture}[thick,scale=0.6, every node/.style={scale=0.6}]
+    \draw [dashed] (1,12) -- (11,12);
+    \node[above] at (4,11) {1}; \node[above] at (8,11) {true};
+  \end{tikzpicture}}
+
+  \framebox{\begin{tikzpicture}[thick,scale=0.6, every node/.style={transform shape}]
+    \draw [dashed] (1,12) -- (11,12);
+    \node[above] at (4,11) {1}; \node[above] at (8,11) {true};
+  \end{tikzpicture}}
 
 \end{frame}
 
