@@ -1,3 +1,4 @@
+% !TEX program = XeLaTeX
 \documentclass[hyperref={pdfpagelabels=false}]{beamer}
 \let\Tiny=\tiny
 \usetheme[pageofpages=of,% String used between the current page and the
@@ -20,6 +21,10 @@
 \usepackage{color}
 \usepackage{textcomp}
 
+% The followin enable CJK and needs for Japanese the fonts from: http://ipafont.ipa.go.jp/old/ipafont/download.html
+\usepackage{zxjatype}
+\usepackage[ipa]{zxjafont}
+
 \usetikzlibrary{mindmap,trees}
 
 \definecolor{amber}{rgb}{1.0, 0.75, 0.0}
@@ -33,7 +38,7 @@
 \lstset{language=TeX}
 
 \title{}
-\author{Steve Clement - CIRCL \emph{TLP:\textcolor{green}{GREEN}}}
+\author{Steve Clement - チーサート CIRCL \emph{TLP:\textcolor{green}{GREEN}}}
 \institute{}
 \date{\today}
 
